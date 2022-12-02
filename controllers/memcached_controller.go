@@ -29,7 +29,7 @@ import (
 	cachev1alpha1 "github.com/PatAKnight/memcached-operator/api/v1alpha1"
 )
 
-// MemcachedReconciler reconciles a Memcached object
+// MemcachedReconciler reconciles a Memcached obj
 type MemcachedReconciler struct {
 	client.Client
 	Scheme *runtime.Scheme
