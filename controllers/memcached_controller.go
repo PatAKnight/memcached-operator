@@ -19,8 +19,8 @@ package controllers
 import (
 	"context"
 
-	"k8s.io/apimachinery/pkg/runtime"
 	appsv1 "k8s.io/api/apps/v1"
+	"k8s.io/apimachinery/pkg/runtime"
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/controller"
@@ -29,7 +29,8 @@ import (
 	cachev1alpha1 "github.com/PatAKnight/memcached-operator/api/v1alpha1"
 )
 
-// MemcachedReconciler reconciles a Memcached obj
+// MemcachedReconciler reconciles a Memcached object
+// Testing
 type MemcachedReconciler struct {
 	client.Client
 	Scheme *runtime.Scheme
@@ -46,7 +47,7 @@ type MemcachedReconciler struct {
 // TODO(user): Modify the Reconcile function to compare the state specified by
 // the Memcached object against the actual cluster state, and then
 // perform operations to make the cluster state reflect the state specified by
-// the user.
+// the user. Once more
 //
 // For more details, check Reconcile and its Result here:
 // - https://pkg.go.dev/sigs.k8s.io/controller-runtime@v0.12.2/pkg/reconcile
