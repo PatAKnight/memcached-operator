@@ -35,5 +35,5 @@ spec:
       - name: manager
         args:
         - "--health-probe-bind-address=:8081"
-        - "--metrics-bind-address=127.0.0.1:9000"
+        - "--metrics-bind-address=127.0.0.1:3000"
         - "--leader-elect"

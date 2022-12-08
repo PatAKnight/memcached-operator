@@ -55,6 +55,9 @@ func (r *MemcachedReconciler) Reconcile(ctx context.Context, req ctrl.Request) (
 	_ = log.FromContext(ctx)
 
 	// TODO(user): your logic here
+	var xyx = 10
+
+	fmt.Println(xyx)
 
 	return ctrl.Result{}, nil
 }
