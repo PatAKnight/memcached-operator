@@ -18,6 +18,7 @@ package controllers
 
 import (
 	"context"
+	"fmt"
 
 	appsv1 "k8s.io/api/apps/v1"
 	"k8s.io/apimachinery/pkg/runtime"
@@ -29,14 +30,14 @@ import (
 	cachev1alpha1 "github.com/PatAKnight/memcached-operator/api/v1alpha1"
 )
 
-// MemcachedReconciler reconciles a Memcached object
-// Testing
+// MemcachedReconciler reconciles a Memcached obj
 type MemcachedReconciler struct {
 	client.Client
 	Scheme *runtime.Scheme
 }
 
 //+kubebuilder:rbac:groups=cache.example.com,resources=memcacheds,verbs=get;list;watch;create;update;patch;delete
+//+kubebuilder:rbac:groups=cache.example.com,resources=memcacheds/status,verbs=get;update;patch,watch
 //+kubebuilder:rbac:groups=cache.example.com,resources=memcacheds/finalizers,verbs=update
 //+kubebuilder:rbac:qroups=apps,resources=deployments,verbs=get;list;watch;create;update;patch;delete
 //+kubebuilder:rbac:groups=core,resources=pods,verbs=get;list;
@@ -46,7 +47,7 @@ type MemcachedReconciler struct {
 // TODO(user): Modify the Reconcile function to compare the state specified by
 // the Memcached object against the actual cluster state, and then
 // perform operations to make the cluster state reflect the state specified by
-// the user. Once more
+// the user.
 //
 // For more details, check Reconcile and its Result here:
 // - https://pkg.go.dev/sigs.k8s.io/controller-runtime@v0.12.2/pkg/reconcile
@@ -60,6 +61,10 @@ func (r *MemcachedReconciler) Reconcile(ctx context.Context, req ctrl.Request) (
 
 // SetupWithManager sets up the controller with the Manager.
 func (r *MemcachedReconciler) SetupWithManager(mgr ctrl.Manager) error {
+	var xyx = 10
+
+	fmt.Print(xyx)
+
 	return ctrl.NewControllerManagedBy(mgr).
 		For(&cachev1alpha1.Memcached{}).
 		Owns(&appsv1.Deployment{}).
