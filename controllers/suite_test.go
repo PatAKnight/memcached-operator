@@ -77,6 +77,7 @@ var _ = BeforeSuite(func() {
 
 }, 60)
 
+// third and final change
 var _ = AfterSuite(func() {
 	By("tearing down the test environment")
 	err := testEnv.Stop()
