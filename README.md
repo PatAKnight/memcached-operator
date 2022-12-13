@@ -1,2 +1,2 @@
 # memcached-operator
-temporary repository
+temporary repository that is being used for testing
