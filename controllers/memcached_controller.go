@@ -59,7 +59,7 @@ func (r *MemcachedReconciler) Reconcile(ctx context.Context, req ctrl.Request) (
 	return ctrl.Result{}, nil
 }
 
-// SetupWithManager sets up the controller with the Manager.
+// SetupWithManager sets up the controller with the Manager. first change commit
 func (r *MemcachedReconciler) SetupWithManager(mgr ctrl.Manager) error {
 	var xyx = 10
 
